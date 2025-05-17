@@ -38,7 +38,7 @@ dotenv.config();
 
 // seed()
 
-mongoose.connect('mongodb://127.0.0.1:27017/E-Learning-Hub')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => {
